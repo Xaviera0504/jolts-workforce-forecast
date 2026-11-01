@@ -1,0 +1,13 @@
+series,month,horizon,hires_forecast_k,openings_forecast_k,hires_per_opening_forecast,data_through
+Total nonfarm,2026-09,1,5221,7237,0.721,2026-08
+Total nonfarm,2026-10,2,5221,7229,0.722,2026-08
+Total nonfarm,2026-11,3,5220,7223,0.723,2026-08
+Total nonfarm,2026-12,4,5219,7216,0.723,2026-08
+Total nonfarm,2027-01,5,5219,7211,0.724,2026-08
+Total nonfarm,2027-02,6,5218,7206,0.724,2026-08
+Finance and insurance,2026-09,1,113,303,0.371,2026-08
+Finance and insurance,2026-10,2,113,303,0.371,2026-08
+Finance and insurance,2026-11,3,113,303,0.371,2026-08
+Finance and insurance,2026-12,4,113,303,0.371,2026-08
+Finance and insurance,2027-01,5,113,303,0.371,2026-08
+Finance and insurance,2027-02,6,113,303,0.371,2026-08
