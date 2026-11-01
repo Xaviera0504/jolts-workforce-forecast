@@ -14,6 +14,7 @@ for c,l,col in spec:
     ax.plot(w.index, w[c], color=col, lw=2, label=l)
     ax.text(w.index[-1]+pd.Timedelta(days=60), w[c].iloc[-1], f"{l}\n{w[c].iloc[-1]:.1f}M", color=INK, fontsize=9, va="center")
 ax.set_ylim(0, 13); ax.set_xlim(w.index[0], w.index[-1]+pd.Timedelta(days=900))
+ax.set_xticks([pd.Timestamp(f"{y}-01-01") for y in range(2000, 2027, 4)] + [pd.Timestamp("2026-01-01")]); ax.set_xticklabels([str(y) for y in range(2000, 2027, 4)] + ["2026"])
 ax.grid(axis="y", color=GRID, lw=.8); ax.set_axisbelow(True)
 for s in ["top","right","left"]: ax.spines[s].set_visible(False)
 ax.spines["bottom"].set_color(GRID)

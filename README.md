@@ -7,7 +7,7 @@ Forecasts **hires per opening** (hires / job openings) 6 months ahead for total 
 ![Openings, hires, quits](results/jolts_total_nonfarm.png)
 
 ## Result in one paragraph
-A standard time-series model barely beats "same as now" for total nonfarm (error 0.030 vs 0.032) and ties a 12-month average for finance and insurance (0.107 vs 0.107). The useful output is the range: for 100 hires a month, a finance and insurance team needs between about 209 and 378 open roles depending on where the ratio lands.
+A standard time-series model barely beats "same as now" for total nonfarm (error 0.030 vs 0.032) and ties a 12-month average for finance and insurance (0.107 vs 0.107). The useful output is the range: for 100 hires a month, a finance and insurance team needs between about 209 and 378 open roles depending on where the ratio lands (a typical error band, not a confidence interval).
 
 ## Data
 - Source: BLS JOLTS flat files, https://download.bls.gov/pub/time.series/jt/
@@ -36,6 +36,8 @@ A standard time-series model barely beats "same as now" for total nonfarm (error
 
 ## Assumptions and limits
 - The company is hypothetical. The $10,000 cost per open role per month in `scenario_costing.csv` is an assumption, not data.
+- Openings are an end-of-month count and hires are a monthly flow, so "100 / ratio" is a rough planning rule, not an exact one.
+- The 36 backtest months overlap, so they are not independent tests.
 - A low ratio means openings aren't turning into hires; it does not prove roles are hard to fill.
 - The same test window compared two model variants, so small gaps are not strong evidence.
 - Finance and insurance monthly data is noisy (e.g. Dec 2025 openings of 129k vs roughly 300k nearby).
