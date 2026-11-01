@@ -7,7 +7,7 @@ For every job opening, how many hires does the market produce, and where is that
 
 ## The answer
 - **Total nonfarm: stable and low.** 0.73 hires per opening today, versus a 2000–2019 average of 1.17. The forecast for the next 6 months is about 0.72.
-- **Finance and insurance: lower and much less certain.** 0.31 today, versus a 2000–2019 average of 0.67. The forecast is about 0.37, with a wide range (0.26 to 0.48).
+- **Finance and insurance: lower and much less certain.** 0.31 today, versus a 2000–2019 average of 0.67. The forecast is about 0.37, with a typical error band of 0.26 to 0.48 (the forecast plus or minus its average backtest error, not a statistical confidence interval).
 
 ## What it means for a hiring plan
 A hypothetical company needs 100 hires a month. The open roles it must carry:
@@ -15,11 +15,11 @@ A hypothetical company needs 100 hires a month. The open roles it must carry:
 | Scenario | Total nonfarm | Finance and insurance |
 |---|---|---|
 | Model forecast | 138 | 269 |
-| Forecast, low end of range | 144 | 378 |
-| Forecast, high end of range | 133 | 209 |
+| Ratio falls by the typical error | 144 | 378 |
+| Ratio rises by the typical error | 133 | 209 |
 | Stress (lowest ratio in 2022–23) | 186 | 469 |
 
-Planning rule: for total nonfarm, plan on about 140 open roles per 100 hires. For finance and insurance, plan to the low end of the range, about 380, and review monthly. At an assumed $10,000 per open role per month, the spread in finance and insurance (209 to 378 roles) is about $1.7 million a month. The $10,000 is an assumption, not data.
+Planning rule: for total nonfarm, plan on about 140 open roles per 100 hires. For finance and insurance, plan for the ratio falling by the typical error, about 380 open roles, and review monthly. For scale only: at a placeholder $10,000 per open role per month (my assumption, not data), the 169-role spread in finance and insurance (209 to 378) would be about $1.7 million a month.
 
 ## How reliable is the forecast?
 I tested every method by hiding the last 36 months and forecasting 6 months ahead each time. Average error, in hires per opening:
@@ -34,7 +34,8 @@ The model barely beats the simple rules. For total nonfarm the forecast is off b
 ## Limits
 - National and industry-level data. It has no employer-level information, and the company above is hypothetical.
 - A low ratio means openings are not turning into hires. It does not prove roles are hard to fill, because some openings are never filled.
+- Openings are an end-of-month count and hires are a monthly flow, so "100 divided by the ratio" is a rough planning rule, not an exact one.
 - Finance and insurance monthly figures are noisy (for example, Dec 2025 shows 129k openings against roughly 300k in neighboring months).
-- The same test window was used to compare two model variants, so small gaps between methods should not be over-read.
+- The same test window was used to compare two model variants, so small gaps between methods should not be over-read. The 36 test months also overlap, so they are not independent tests.
 
 *All numbers come from the code in this repo. This brief was written from those outputs.*
