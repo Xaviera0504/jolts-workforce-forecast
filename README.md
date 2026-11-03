@@ -26,6 +26,12 @@ A standard time-series model barely beats "same as now" for total nonfarm (error
 7. Model: `python scripts/better_model.py data/jolts_clean.csv results/baseline_backtest.csv results/model_backtest.csv`
 8. Scenarios: `python scripts/scenario.py data/jolts_clean.csv results/scenario_costing.csv`
 9. Update the numbers in `brief.md` from the new results.
+10. Industry ranking (19 industries, 12-month hires per opening vs. each industry's 2000-2019 average): `python scripts/industry_ranking.py data/raw results/industry_ranking.csv`, then `python scripts/plot_industry.py results/industry_ranking.csv results/industry_ranking.png`.
+
+## Industry ranking
+`results/industry_ranking.csv` ranks 19 industries by hires per opening over the 12 months through Sep 2026 (data from the Nov 3, 2026 release), next to each industry's own 2000-2019 average. Small industries (federal, mining) are noisy month to month, which is why it uses 12 months.
+
+![Industry ranking](results/industry_ranking.png)
 
 ## Method
 - **Target:** hires per opening. Higher means openings convert to hires more easily.
